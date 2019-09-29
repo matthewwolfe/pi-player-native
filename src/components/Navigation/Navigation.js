@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
+import { useStores } from '../../hooks';
 
 function Navigation() {
   const [active, setActive] = useState('home');
+  const { navigation } = useStores(['navigation']);
 
   return (
     <View style={styles.container}>
